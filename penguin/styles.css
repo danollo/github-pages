@@ -224,7 +224,7 @@
     top: 0%;
     right: -5%;
     transform: rotate(-45deg) scaleX(-1);
-    transform-origin: top right;
+    transform-origin: bottom right;
     animation: 3s linear infinite wave;
     
   }
