@@ -221,12 +221,11 @@
   }
   
   .arm.right {
-    top: 0%;
-    right: -5%;
-    transform: rotate(-45deg) scaleX(-1);
-    transform-origin: bottom left;
-    animation: 3s linear infinite wave;
-    
+    top: 40%;
+    right: -20%;
+    transform: rotate(-110deg) scaleX(1);
+    animation: 3s linear infinite wavetwo;
+    transform-origin: top left;
   }
   
   @keyframes wave {
@@ -241,6 +240,21 @@
     }
     40% {
       transform: rotate(130deg) scaleX(-1);
+    }
+  }
+
+  @keyframes wavetwo{
+    10% {
+      transform: rotate(-110deg) scaleX(1);
+    }
+    20% {
+      transform: rotate(-130deg) scaleX(1);
+    }
+    30% {
+      transform: rotate(-110deg) scaleX(1);
+    }
+    40% {
+      transform: rotate(-130deg) scaleX(1);
     }
   }
   
