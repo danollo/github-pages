@@ -1,9 +1,9 @@
 body {
-    background-color: #0a0a23;
+    background-color: #426b76;
   }
   
   #text {
-    background-color: #0a0a23;
+    background-color: #426b76;
     color: #ffffff;
     padding: 10px;
   }
@@ -19,14 +19,14 @@ body {
   
   #controls,
   #stats {
-    border: 1px solid #0a0a23;
+    border: 1px solid #426b76;
     padding: 5px;
     color: #0a0a23;
   }
   
   #monsterStats {
     display: none;
-    border: 1px solid #0a0a23;
+    border: 1px solid #426b76;
     padding: 5px;
     color: #ffffff;
     background-color: #c70d0d;
