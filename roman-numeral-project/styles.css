@@ -1,0 +1,42 @@
+* {
+  text-align: center;
+  font-family: sans-serif;
+  font-weight: bold;
+  background-color: black;
+  color: #C93675;
+}
+
+#number{
+  background-color: #C93675;
+  color: black;
+  border: 5px inset #ce4a83;
+  border-radius: 7px;
+  font-size: 30px;
+}
+#convert-btn{
+  background-color: #C93675;
+  color: black;
+  border: 5px inset #ce4a83;
+  border-radius: 7px;
+  font-size: 25px;
+}
+#output{
+  border: 5px inset #ce4a83;
+  background-color: #C93675;
+  color: black;
+  font-size: 30px;
+  border-radius: 7px;
+  display: inline-block;
+  padding: 8px;
+}
+
+#output:empty{
+  display: none;
+}
+
+h1{
+  font-size: 40px;
+}
+h2{
+  font-size: 35px;
+}
