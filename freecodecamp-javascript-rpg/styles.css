@@ -43,3 +43,23 @@ body {
     background-image: linear-gradient(#fecc4c, #ffac33);
     border: 3px solid #feac32;
   }
+ul{
+  list-style-type: none;
+  display:inline-block;
+  margin-left: 5px;
+  margin-top: 5px;
+  background-color: #426b76;
+  max-width: 100px;
+  min-width: 100px;
+  border: 3px solid black;
+  position: initial;
+}
+
+li{
+  text-align: center;
+}
+
+a{
+  text-decoration: none;
+  text-align: center;
+}
