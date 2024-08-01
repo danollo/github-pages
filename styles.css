@@ -1,47 +1,171 @@
-*{
-    font-family: 'BigNoodleTitling', sans-serif;
-    background-color: #1a2b2f;
-    text-decoration: none;
+* {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal
+}
+h1 {
+    text-shadow: 0 0 35px rgba(255,255,255,.4);
+    -webkit-text-stroke: 2px #426b76
 }
 
-@font-face {
-    font-family: 'BigNoodleTitling';
-    src: url('fonts/big_noodle_titling.ttf') format("truetype");
+body,h1,html {
+    margin: 0
 }
 
-h1{
-    padding-top: 150px;
-    color: white;
+body,h1 {
+    color: #fff
+}
+
+body,html {
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden
+}
+
+body {
+    font-family: "BigNoodleTitling",sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh
+}
+
+footer,header {
+    height: 50px
+}
+
+body,header {
+    background-color: #1a2b2f
+}
+
+header {
+    margin-top: 60px;
     text-align: center;
-    font-size: 250%;
-    text-shadow: 0 0 20px black, 0 0 20px black, 0 0 20px black, 0 0 20px black;
-    letter-spacing: 1.65px;
+    font-size: 150%;
+    flex: 0 0 auto
 }
 
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill,
-                                  minmax(150px,1fr));
-    width: 100%;
+h1 {
+    font-size: 2em;
+    padding-bottom: 50px
 }
-a{
-    padding: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
-    background-color: #426b76;
-    max-width: 100px;
-    min-width: 100px;
-    border: 4px solid;
-    transform: scale(1.5);
-    text-align: center;
-    display:flex;
+
+*,.container,main {
+    box-sizing: border-box
+}
+
+main {
+    padding: 20px;
+    display: flex;
+    align-items: center;
     justify-content: center;
-    color: white;
+    flex: 1 0 auto;
+    position: relative
 }
 
-a:hover{
-    background-color: white;
-    color: black;
-    border: 3.8px solid black;
-    cursor:grab;
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(175px,auto));
+    width: 100%;
+    max-width: 1000px;
+    overflow: hidden;
+    margin: 0 auto;
+    gap: 1px;
+    padding: 20px
+}
+
+.item,footer a[data-title]:after {
+    background-color: #426b76;
+    color: #fff
+}
+
+.item,footer {
+    text-align: center
+}
+
+.item {
+    font-size: 150%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    transition: background-color 250ms,ease-in-out 150ms;
+    min-height: 100px;
+    line-height: 100px;
+    z-index: 9;
+    position: relative;
+    overflow: hidden
+}
+
+.item a,footer a {
+    text-decoration: none
+}
+
+.item a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: inherit;
+    box-sizing: border-box;
+    padding: 0;
+    border: 7px solid
+}
+
+.container:hover .item:not(:hover) {
+    filter: blur(2px)
+}
+
+.item:hover {
+    background-color: #fff;
+    transform: scale(1.2);
+    z-index: 10
+}
+
+footer {
+    background-color: #333;
+    width: 100%;
+    margin-top: 50px;
+    position: fixed;
+    bottom: 0
+}
+
+footer a {
+    transform: scale(1.3);
+    color: #f27b1a;
+    padding: 10px;
+    margin-top: 10px;
+    display: inline-block;
+    position: relative
+}
+
+.item:hover,footer a:hover {
+    color: #426b76
+}
+
+footer a[data-title]:after {
+    content: attr(data-title);
+    font-family: "Bebas Neue";
+    font-size: .9em;
+    position: absolute;
+    padding: 8px 12px;
+    bottom: 130%;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    box-shadow: 0 4px 8px rgba(0,0,0,.3);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .2s ease-in-out,visibility .1s ease-in-out;
+    z-index: 10;
+    border: 2px solid #fff
+}
+
+footer a[data-title]:hover:after {
+    opacity: 1;
+    visibility: visible
+}
+
+footer a[data-title]:hover:before {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: .1s
 }
